@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Bauhaus 93";
+    src: url("../BAUHS93.TTF");
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color:  rgb(28, 26, 26);
+}
+span{
+    font-size: 350px;
+    color: #437512;
+    grid-row: 1;
+    grid-column: 3;
+    font-family: "Bauhaus 93";
+}
+
+img.logo{
+    grid-row: 1;
+    grid-column:2;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: inherit;
+    width: 375px;
+    margin-top: 25%;
+}
+.excuse{
+    grid-column: 4/5;
+    grid-row: 2;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+p.excuse{
+    grid-column: 3/5;
+    grid-row: 1;
+    font-family: "system-ui";
+    font-size: 40px;
+    color: #437512;
+    margin-top: 65%;
+margin-left: 45%;
+}
+
+button{
+    background:  #437512;
+    border-radius: 6px;
+    font-size: 25px;
+    color: rgb(0,0,0.12);
+    font-family: "Bauhaus 93";
+    border: 0;
+    cursor: pointer;
+    grid-row: 2;
+    grid-column: 3;
+    margin-left: 30%;
+    width: 35%;
+    height: 100px;
+    margin-top: -30%;
+}
+
+@media (max-width:770px) {
+    body{
+        margin-top: 25%;
+        grid-template-columns:1fr;
+    }
+    img.logo{
+        margin-top: 100px;
+        grid-row: 2;
+        grid-column: 1;
+        width: 100px;
+        margin-left: 5%;
+    }
+    span {
+        grid-row: 2;
+        grid-column: 1;
+        font-size: 100px;
+        margin-top: 75px;
+        margin-left: 75px;
+    }
+    button{
+        grid-row: 4;
+        grid-column: 1;
+        font-size: 75%;
+        margin: 0 0 0 50%;
+        width: 70%;
+    }
+    p.excuse{
+        grid-row: 3;
+        grid-column: 1;
+        font-size: 75% ;
+        margin: 0 0 0 50%;
+    }
+
+}
+
+a{
+    color: black;
+}

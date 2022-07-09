@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "Bauhaus 93";
+    src: url("../BAUHS93.TTF");
+}
+body{
+    background-color: rgb(28, 26, 26);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+}
+.logo{
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 150px;
+    height: 150px;
+    grid-column: 1;
+    grid-row: 1;
+    width: 150px;
+    height: 150px;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.title{
+    font-size: 150px;
+    font-family: "Bauhaus 93";
+    background: linear-gradient(  to right, #224104 0%, #8cd971 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 4s ease infinite;
+    background-size: 300%;
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.button{
+    display: flex;
+    background:  linear-gradient(to right, #3f8d2c 0%, #224104 100%);
+    border-radius: 6px;
+    font-size: 30px;
+    color: rgb(28, 26, 26);
+    font-family: "Bauhaus 93";
+    border:0;
+    margin: 10px auto 0;
+    outline: none;
+    width: 140px;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+.search{
+    grid-column: 2;
+    grid-row: 3;
+}
+.button img {
+    width: 50px;
+    display: none;
+}
+button:hover img{
+    display: block;
+}
+button:hover img{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+
+}
+
+div{
+    align-content: center;
+    text-align: center;
+}
+
+.item{
+    text-align: center;
+    background-color: rgba(105, 105, 105, 0);
+    border-radius: 8px;
+    font-size: 50px;
+    font-family: "Bauhaus 93";
+    border-color: #365a1d;
+    border-block-color: #365a1d;
+    border-top-color: #36521d;
+    border-left-color: #36521d;
+}
+.item, select, textarea{
+    color: #36521d;
+}
+
+.search.autocom-box{
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow: auto;
+}
+.autocom-box li{
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+}
+.search.autocom-box li{
+    display: block;
+}
+
+.autocom-box li:hover{
+    background-color: rgba(54, 90, 29, 0);
+
+}
+@media  (max-width:778px) {
+    body{
+        width: 100%;
+        display: grid;
+        grid-template-columns:1fr;
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+    }
+    .logo{
+        margin-left: 50px;
+        width: 100px;
+        height: 100px;
+        grid-row: 1;
+    }
+    .title{
+        width: 100%;
+        font-size: 100px;
+        grid-column: 1;
+    }
+    .groupie{
+        grid-row: 2;
+    }
+    .tracker{
+        group-row:3;
+    }
+    form{
+        grid-column: 1;
+        grid-row: 3;
+        margin-top: 0;
+    }
+    .item{
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+div#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    left: 0;
+    text-align: left;
+    animation: 30s slidy infinite;
+}

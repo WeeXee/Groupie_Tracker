@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/logo_groupish.png">
+    <title>CSS Template</title>
+    <link rel='stylesheet' href='../public/artist.css' type='text/css'/>
+</head>
+<body>
+<section class='content'>
+   <div class="logo"><img class="logo" src="../public/logo_groupish.png"></div>
+    <div class="photo"><img class="img" src="{{.Image }}" alt="{{.Name}}"></div>
+    <div class="name">
+        <div class="name"> {{.Name}}</div>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16102263.597580465!2d-90.85270045708344!3d38.55200273589504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1646838936240!5m2!1sfr!2sfr"
+                width="600" height="300" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+    <div class="info">
+        <div class="member"><strong>Members:</strong> {{.Members}}</div>
+        <div class="creationdate"><strong>Creation date:</strong> {{.CreationDate}}</div>
+        <div class="firstalbum"><strong>First album:</strong> {{.FirstAlbum}}</div>
+        <div class="locations"><strong>Location:</strong> {{.Locations}}</div>
+        <div class="datelocation"><strong>Date location:</strong> {{.DatesLocations}}</div>
+        <div class="concertdate"><strong>Concert date:</strong> {{.ConcertDates}}</div>
+    </div>
+</section>
+</body>
+</html>
+
